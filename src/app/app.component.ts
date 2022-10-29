@@ -8,32 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // title = 'practica3';
 
-  mensaje="Hay saldo";
-  visualizaDiv=true;
-
-  array = [
-    {
-      nombre:'pedro',
-      apellido:'hola'
-    },
-    {
-      nombre: 'raul',
-      apellido:'adios'
-    },
-    {
-      nombre:'marta',
-      apellido:'quetal'   
-    },
-    {
-      nombre: 'julia',
-      apellido:'klk'
-    },
-    {
-      nombre: 'bobby',
-      apellido:'ciao'
-    }];
-
-  visualiza(){
-    this.visualizaDiv = !this.visualizaDiv
-  }
 }

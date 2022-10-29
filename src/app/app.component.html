@@ -1,22 +1,5 @@
-<div class="container mt-5">
-  <button type="button" class="btn btn-outline-secondary" (click)="visualiza()">Comprobar si hay saldo</button>
-  <div *ngIf="visualizaDiv" class="alert alert-success mt-3" role="alert">
-    {{mensaje}} <!-- esta declarat al .ts -->
-  </div>
-</div>
+<app-header></app-header>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div *ngFor="let item of array">
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{item.nombre + " " + item.apellido}}</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

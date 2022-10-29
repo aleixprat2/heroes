@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h1 class="titol mt-4">{{this.nomHeroe}} <span style="font-weight: normal; font-size: 30px;">{{this.anyHeroe}}</span></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="imatge" src="{{imgHeroe}}" width="400" height="350">
+            <a class="nav-link btn btn-outline-danger text-danger" [routerLink]="['/heroes']" style="height: 30px;"> Regresar </a>
+        </div> 
+        <div class="col-md-8">
+            <h3>{{nomHeroe}}</h3>
+            <hr>
+            <p>{{bioHeroe}}</p>
+            <div *ngIf="this.casaHeroe=='Marvel'; else elseBlock"><img src="../../../assets/img/marvel.png" width="125" height="125"></div>
+            <ng-template #elseBlock><img src="../../../assets/img/DC.jpg" width="125" height="125"></ng-template>
+        </div>
+    </div>
+</div>
+
+
+
