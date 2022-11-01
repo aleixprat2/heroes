@@ -1,1 +1,87 @@
-<p>home works!</p>
+<img src="../../../assets/img/tots3.jpg" class="imatgeTop">
+<div class="titol container">
+    <h3> El <b>Universo Amalgama</b>, formado por Marvel y DC</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text" style="text-align: justify;">
+            <h4>Contenido de este sitio web</h4>
+            <p>En este sitio web se hace una recopilación de todos los personajes de Marvel y DC. De cada uno de estos se hace una pequeña descripción, se muestra su aparición, una fotografía suya y se categoriza dependiendo de si forma parte del mundo Marvel o DC. Para más información sobre cada personaje, visite la página <a [routerLink]="['/heroes']"> Heroes</a> o haga click en cualquiera de las imágenes en la parte derecha de su pantalla. <br> <br> Para más información sobre cada uno de los diferentes mundos, visite la página <a [routerLink]="['/about']"> About</a>. </p>
+        </div>
+        <div class="col-md-4 dreta">
+            <h4>Personajes del mundo DC</h4>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Aquaman']"><img src="assets/img/aquaman.png" class="d-block w-100"></a>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Batman']"><img src="assets/img/batman.png" class="d-block w-100"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Linterna Verde']"><img src="assets/img/linterna-verde.png" class="d-block w-100"></a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 text">
+            <h4 style="margin-bottom: 20px;">Creador de cada editorial</h4>
+            <div class="card-group">
+                <div class="card border-light mb-3" style="max-width: 18rem; margin-right: 20px;">
+                    <div class="card-header">Marvel</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Martin Goodman</h5>
+                      <p class="card-text" style="text-align: justify;">Martin Goodman​ fue un editor de revistas estadounidense y uno de los responsables de dar vida a Timely Comics quien sería conocida a partir de 1961 como Marvel Comics gracias a su primo político, Stan Lee.</p>
+                    </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">DC</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Malcolm Wheeler</h5>
+                      <p class="card-text" style="text-align: justify;">Malcolm Wheeler-Nicholson fue un escritor de pulps. Tiempo después de retirarse de la editorial que él creó, la National Allied Publications de Wheeler-Nicholson se transformaría en DC Comics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 dreta">
+            <h4>Personajes del mundo Marvel</h4>
+            <div id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Daredevil']"><img src="assets/img/daredevil.png" class="d-block w-100"></a>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Hulk']"><img src="assets/img/hulk.png" class="d-block w-100"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Spider-Man']"><img src="assets/img/spiderman.png" class="d-block w-100"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a class="d-block w-100 imatge" [routerLink]="['/heroes/Wolverine']"><img src="assets/img/wolverine.png" class="d-block w-100"></a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
