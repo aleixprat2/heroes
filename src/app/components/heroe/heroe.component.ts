@@ -76,20 +76,17 @@ export class HeroeComponent implements OnInit {
   imgHeroe: any;
   aparicionHeroe: any;
   casaHeroe: any;
-  anyHeroe: any;
 
   constructor(private route: ActivatedRoute) { }
   ngOnInit(): void {
     this.rutaHeroe = this.route.snapshot.paramMap.get('nombre');
-    this.nomHeroe = this.rutaHeroe;
-
     for(let i=0; i< this.heroes.length; i++){
-      if (this.nomHeroe == this.heroes[i].nombre){
+      if (this.heroes[i].nombre.toLowerCase().indexOf(this.rutaHeroe.toLowerCase()) >= 0){
+        this.nomHeroe = this.heroes[i].nombre;
         this.bioHeroe=this.heroes[i].bio;
         this.imgHeroe=this.heroes[i].img;
         this.casaHeroe=this.heroes[i].casa;
         this.aparicionHeroe=this.heroes[i].aparicion;
-        this.anyHeroe = '(' + this.aparicionHeroe.substr(0,4) + ')';
       }
     }
   }
