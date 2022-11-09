@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
-  selector: 'app-heroe',
-  templateUrl: './heroe.component.html',
-  styleUrls: ['./heroe.component.css']
+  selector: 'app-busqueda',
+  templateUrl: './busqueda.component.html',
+  styleUrls: ['./busqueda.component.css']
 })
-export class HeroeComponent implements OnInit {
-
-  id: any;
+export class BusquedaComponent implements OnInit {
 
   heroes = [
     {
@@ -68,27 +68,38 @@ export class HeroeComponent implements OnInit {
       casa: "Marvel"
     }
   ]
-
-  rutaHeroe: any;
   
-  nomHeroe: any;
-  bioHeroe: any;
-  imgHeroe: any;
-  aparicionHeroe: any;
-  casaHeroe: any;
+  rutaBusqueda: any;
+  arrayCoincidencia: {Nom:string, Imatge: string, Bio: String, Aparicio: string} []= [];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
+
   ngOnInit(): void {
-    this.rutaHeroe = this.route.snapshot.paramMap.get('nombre');
+    this.rutaBusqueda = this.route.snapshot.paramMap.get('nombre');
+    let contador = 0;
+
     for(let i=0; i< this.heroes.length; i++){
-      if (this.heroes[i].nombre.toLowerCase().indexOf(this.rutaHeroe.toLowerCase()) == 0){
-        this.nomHeroe = this.heroes[i].nombre;
-        this.bioHeroe=this.heroes[i].bio;
-        this.imgHeroe=this.heroes[i].img;
-        this.casaHeroe=this.heroes[i].casa;
-        this.aparicionHeroe=this.heroes[i].aparicion;
+      if (this.heroes[i].nombre.toLowerCase().indexOf(this.rutaBusqueda.toLowerCase()) >= 0){
+        contador ++;
+        this.arrayCoincidencia.push({
+          Nom: this.heroes[i].nombre,
+          Imatge: this.heroes[i].img,
+          Bio: this.heroes[i].bio,
+          Aparicio: this.heroes[i].aparicion
+        } )
       }
     }
+
+    if(contador==1){
+      this.router.navigate(['/heroes/', this.rutaBusqueda]);
+    }
+
+    if(contador==0){
+      window.alert("Lo sentimos, no hay coincidencias :(");
+      this.router.navigate(['/heroes']);
+    }
   }
+
+  
 
 }

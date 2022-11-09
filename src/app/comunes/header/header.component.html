@@ -14,8 +14,17 @@
           </li>
         </ul>
         <form class="d-flex" role="search"> 
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" (keyup)="regresar()" (keyup)="cargar(textobusqueda.value)" #textobusqueda>
+          <input class="form-control me-2" placeholder="Buscar" list="opcions" type="search"  aria-label="Buscar" (keyup)="regresar()" (keyup)="cargar(textobusqueda.value)" #textobusqueda>
           <button class="btn btn-outline-primary" type="button" (click)="buscar()">Buscar</button>
+          <datalist id="opcions">
+            <option value="Aquaman">
+            <option value="Batman">
+            <option value="Daredevil">
+            <option value="Hulk">
+            <option value="Linterna Verde">
+            <option value="Spider-Man">
+            <option value="Wolverine">
+          </datalist>
         </form>
       </div>
     </div>

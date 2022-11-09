@@ -16,15 +16,15 @@ export class HeaderComponent implements OnInit {
   }
 
   cargar(texto:any){
-    console.log(texto);
     this.textofinal= texto;
   }
 
   buscar(){
-    this.route.navigate(['/heroes/', this.textofinal])
+    this.route.navigate(['/busqueda/', this.textofinal]);
   }
 
   regresar(){
     this.route.navigate(['/heroes'])
   }
+
 }
