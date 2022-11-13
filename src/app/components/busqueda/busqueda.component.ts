@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-busqueda',
@@ -69,7 +68,7 @@ export class BusquedaComponent implements OnInit {
     }
   ]
   
-  rutaBusqueda: any;
+  rutaBusqueda: any; 
   arrayCoincidencia: {Nom:string, Imatge: string, Bio: String, Aparicio: string} []= [];
 
   constructor(private route: ActivatedRoute, private router: Router) { }
